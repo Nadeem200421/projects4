@@ -144,7 +144,7 @@ function App() {
 
         <div className="projects-gallery">
           <div className="project-item">
-            <img src="https://github.com/Nadeem200421/projects4/blob/main/public/imgs/pic1.jpeg" alt="Matterhorn" />
+            <img src=".../imgs/pic1.jpeg" alt="Matterhorn" />
             <h3>The Majestic Matterhorn Mountains 🏔</h3>
             <p>
               Captured during sunrise, the Matterhorn glows golden under the
