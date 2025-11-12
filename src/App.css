@@ -1,0 +1,391 @@
+/* =====================================================
+   🌐 GLOBAL STYLES
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* =====================================================
+   🧭 NAVBAR STYLES
+===================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* Fallback (works everywhere): semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  padding: 15px;
+}
+
+.navbar li {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+  color: #007bff;
+}
+
+/* Tooltip */
+.navbar li::after {
+  content: attr(data-hover);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar li:hover::after {
+  opacity: 1;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-toggle div {
+  width: 26px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* =====================================================
+   🏠 SECTIONS (HOME, ABOUT, PROJECTS, CONTACT)
+===================================================== */
+.home {
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  color: #003366;
+}
+
+.home h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.home p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.about {
+  background: linear-gradient(135deg, #f2f2f2, #e6e9ef);
+  color: #2b2b2b;
+}
+
+.about h1 {
+  font-size: 2.4rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   💡 PROJECTS SECTION
+===================================================== */
+.projects {
+  background: linear-gradient(135deg, #eaf0ff, #d6e0ff);
+}
+
+.projects-section {
+  text-align: center;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Projects Grid */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+.project-item {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.project-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.project-item h3 {
+  font-size: 1.3rem;
+  color: #004aad;
+  margin: 15px 0 8px;
+}
+
+.project-item p {
+  padding: 0 20px 20px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* =====================================================
+   📬 CONTACT SECTION
+===================================================== */
+.contact {
+  background: linear-gradient(135deg, #f7f8fc, #edf1f7);
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* ===== Footer Section ===== */
+.footer {
+  background: linear-gradient(135deg, #003366, #004d40);
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* =====================================================
+   📱 RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 992px) {
+  .navbar ul {
+    gap: 25px;
+  }
+
+  .navbar li {
+    font-size: 16px;
+  }
+
+  .section {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 240px;
+    height: 40vh;
+    padding-top: 60px;
+    gap: 25px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease;
+  }
+
+  .navbar.active ul {
+    right: 0;
+  }
+
+  .navbar li::after {
+    display: none;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .contact h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar li {
+    font-size: 15px;
+  }
+
+  .navbar ul {
+    width: 200px;
+  }
+
+  .section {
+    padding-top: 80px;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Apply blur only in supporting browsers */
+@supports ((backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))) {
+  .navbar {
+    /* keep translucent background so the blur is visible */
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(8px); /* Safari / WebKit */
+    backdrop-filter: blur(8px);         /* modern browsers */
+  }
+}
