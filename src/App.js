@@ -144,7 +144,7 @@ function App() {
 
         <div className="projects-gallery">
           <div className="project-item">
-            <img src=".../imgs/pic1.jpeg" alt="Matterhorn" />
+           <img src={`${process.env.PUBLIC_URL}/imgs/pic1.jpeg`} alt="Matterhorn" />
             <h3>The Majestic Matterhorn Mountains 🏔</h3>
             <p>
               Captured during sunrise, the Matterhorn glows golden under the
@@ -154,7 +154,7 @@ function App() {
           </div>
 
           <div className="project-item">
-            <img src="../imgs/pic2.jpeg" alt="Falcon" />
+            <img src="/imgs/pic2.jpeg" alt="Falcon" />
             <h3>The Swift Falcon in Flight 🦅</h3>
             <p>
               A breathtaking moment of a falcon soaring gracefully through the
