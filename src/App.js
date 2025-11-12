@@ -144,7 +144,7 @@ function App() {
 
         <div className="projects-gallery">
           <div className="project-item">
-            <img src="/imgs/pic1.jpeg" alt="Matterhorn" />
+            <img src="../imgs/pic1.jpeg" alt="Matterhorn" />
             <h3>The Majestic Matterhorn Mountains 🏔</h3>
             <p>
               Captured during sunrise, the Matterhorn glows golden under the
@@ -154,7 +154,7 @@ function App() {
           </div>
 
           <div className="project-item">
-            <img src="/imgs/pic2.jpeg" alt="Falcon" />
+            <img src="../imgs/pic2.jpeg" alt="Falcon" />
             <h3>The Swift Falcon in Flight 🦅</h3>
             <p>
               A breathtaking moment of a falcon soaring gracefully through the
@@ -163,7 +163,7 @@ function App() {
           </div>
 
           <div className="project-item">
-            <img src="/imgs/pic3.jpg" alt="Lion" />
+            <img src="../imgs/pic3.jpg" alt="Lion" />
             <h3>Scarface — The King of the Savannah 🦁</h3>
             <p>
               This portrait captures the raw power and regal presence of the
@@ -172,7 +172,7 @@ function App() {
           </div>
 
           <div className="project-item">
-            <img src="/imgs/pic4.jpeg" alt="Tiger" />
+            <img src="../imgs/pic4.jpeg" alt="Tiger" />
             <h3>Bengal Tigers in the Wild 🐅</h3>
             <p>
               A rare glimpse into the dense forests of India, showcasing the
@@ -181,7 +181,7 @@ function App() {
           </div>
 
           <div className="project-item">
-            <img src="/imgs/pic5.jpeg" alt="Peacock" />
+            <img src="../imgs/pic5.jpeg" alt="Peacock" />
             <h3>The Dazzling Peacock 🦚</h3>
             <p>
               With its vibrant feathers and mesmerizing patterns, the peacock
